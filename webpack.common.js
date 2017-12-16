@@ -7,7 +7,7 @@ const paths = {
 };
 
 const config = {
-  entry: path.join(paths.SRC, 'index.js'),
+  entry: ['babel-polyfill', 'raf/polyfill', path.join(paths.SRC, 'index.js')],
   output: {
     path: paths.DIST,
     filename: '[name].[chunkhash].js'
