@@ -4,7 +4,7 @@
   "description": "A simple widget showing the weather at the user location",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest src --watch",
     "dev": "webpack-dev-server --open --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
     "prettier": "prettier-eslint \"./src/**/*.js\" --write"
@@ -41,5 +41,8 @@
   "dependencies": {
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
+  },
+  "jest": {
+    "modulePaths": ["<rootDir>/src", "node_modules"]
   }
 }
