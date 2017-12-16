@@ -4,7 +4,8 @@
   "description": "A simple widget showing the weather at the user location",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier-eslint \"./src/**/*.js\" --write"
   },
   "author": "Marco Lepore",
   "license": "MIT",
@@ -15,6 +16,9 @@
     "eslint-plugin-flowtype": "^2.40.1",
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
-    "eslint-plugin-react": "^7.5.1"
+    "eslint-plugin-react": "^7.5.1",
+    "prettier": "^1.9.2",
+    "prettier-eslint": "^8.3.1",
+    "prettier-eslint-cli": "^4.6.1"
   }
 }
