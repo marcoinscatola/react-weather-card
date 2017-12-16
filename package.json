@@ -20,6 +20,7 @@
     "clean-webpack-plugin": "^0.1.17",
     "css-loader": "^0.28.7",
     "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
     "eslint": "^4.13.1",
     "eslint-config-react-app": "^2.0.1",
     "eslint-plugin-flowtype": "^2.40.1",
@@ -43,6 +44,7 @@
     "react-dom": "^16.2.0"
   },
   "jest": {
-    "modulePaths": ["<rootDir>/src", "node_modules"]
+    "modulePaths": ["<rootDir>/src", "node_modules"],
+    "setupTestFrameworkScriptFile": "<rootDir>/setupTests.js"
   }
 }
