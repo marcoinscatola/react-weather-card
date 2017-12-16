@@ -33,6 +33,9 @@ const config = {
       }
     ]
   },
+  resolve: {
+    modules: [paths.SRC, 'node_modules']
+  },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(paths.SRC, 'index.html')
