@@ -12,7 +12,11 @@
   "author": "Marco Lepore",
   "license": "MIT",
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-eslint": "^7.2.3",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
     "clean-webpack-plugin": "^0.1.17",
     "eslint": "^4.13.1",
     "eslint-config-react-app": "^2.0.1",

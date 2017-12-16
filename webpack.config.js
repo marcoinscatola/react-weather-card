@@ -17,6 +17,15 @@ module.exports = {
   devServer: {
     contentBase: paths.SRC
   },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: ['babel-loader'],
+        exclude: /node_modules/
+      }
+    ]
+  },
   plugins: [
     new CleanWebpackPlugin([paths.DIST]),
     new HtmlWebpackPlugin({
