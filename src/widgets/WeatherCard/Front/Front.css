@@ -1,0 +1,47 @@
+.weather-front {
+  position: relative;
+}
+
+.weather-front__temperature {
+  top: 12px;
+  right: 20px;
+  position: absolute;
+}
+
+.weather-front__place {
+  top: 18px;
+  left: 36px;
+  position: absolute;
+}
+
+.weather-front__perceived {
+  left: 10px;
+  bottom: 84px;
+  position: absolute;
+}
+
+.weather-front__humidity {
+  right: 10px;
+  bottom: 84px;
+  position: absolute;
+}
+
+.weather-front__wind {
+  left: 10px;
+  bottom: 120px;
+  position: absolute;
+}
+
+.weather-front__week {
+  bottom: 38px;
+  height: 35px;
+  width: 100%;
+  position: absolute;
+}
+
+.weather-front__summary {
+  top: 100px;
+  width: 100%;
+  left: 0;
+  position: absolute;
+}

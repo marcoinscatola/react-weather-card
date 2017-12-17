@@ -1,0 +1,12 @@
+.weather-summary {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.weather-summary__label {
+  font-size: 20px;
+  line-height: 1;
+  color: white;
+}
