@@ -59,10 +59,10 @@ const withWeatherData = (
 
     update() {
       let { latitude, longitude } = getOptions(this.props);
-      if (isNil(latitude) || isNil(longitude)) {
-        this.setFetching(true);
-        this.fetchData().then(this.setData, this.setError);
-      }
+      if (isNil(latitude) || isNil(longitude)) return;
+
+      this.setFetching(true);
+      this.fetchData().then(this.setData, this.setError);
     }
 
     fetchData() {
