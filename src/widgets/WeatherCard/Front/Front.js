@@ -21,31 +21,34 @@ const Front = ({
   } = {},
   dayOfWeek,
   place
-}) => (
-  <Card>
-    <div className="weather-front__temperature">
-      <Temperature value={temperature} />
-    </div>
-    <div className="weather-front__place">
-      <Place value={place} />
-    </div>
-    <div className="weather-front__wind">
-      <Wind value={wind} />
-    </div>
-    <div className="weather-front__perceived">
-      <Perceived value={perceived} />
-    </div>
-    <div className="weather-front__humidity">
-      <Humidity value={humidity} />
-    </div>
-    <div className="weather-front__week">
-      <Week currentDay={dayOfWeek} />
-    </div>
-    <div className="weather-front__summary">
-      <Summary iconCode={iconCode} description={description} />
-    </div>
-  </Card>
-);
+}) => {
+  let currentDay = new Date().getDay();
+  return (
+    <Card>
+      <div className="weather-front__temperature">
+        <Temperature value={temperature} />
+      </div>
+      <div className="weather-front__place">
+        <Place value={place} />
+      </div>
+      <div className="weather-front__wind">
+        <Wind value={wind} />
+      </div>
+      <div className="weather-front__perceived">
+        <Perceived value={perceived} />
+      </div>
+      <div className="weather-front__humidity">
+        <Humidity value={humidity} />
+      </div>
+      <div className="weather-front__week">
+        <Week currentDay={currentDay} />
+      </div>
+      <div className="weather-front__summary">
+        <Summary iconCode={iconCode} description={description} />
+      </div>
+    </Card>
+  );
+};
 
 Front.propTypes = {
   weather: PropTypes.shape({
