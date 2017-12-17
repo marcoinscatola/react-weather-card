@@ -1,0 +1,12 @@
+.weather-week__day {
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  font-size: 12px;
+  background-color: rgba(35, 163, 186, 1);
+  text-align: center;
+}
+
+.weather-week__day--current {
+  background-color: transparent;
+}
