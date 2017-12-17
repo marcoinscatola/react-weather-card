@@ -1,7 +1,8 @@
 import React from 'react';
 import Front from './Front';
+import Back from './Back';
 import './components/WeatherIcon';
-const placeholderProps = {
+const placeholderFrontProps = {
   weather: {
     temperature: 34,
     wind: 10,
@@ -14,4 +15,12 @@ const placeholderProps = {
   dayOfWeek: 2
 };
 
-export default props => <Front {...placeholderProps} />;
+const placeholderBackProps = {
+  latitude: 41.9,
+  longitude: 12.49
+};
+
+export default props => [
+  <Front {...placeholderFrontProps} />,
+  <Back {...placeholderBackProps} />
+];
