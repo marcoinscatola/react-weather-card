@@ -1,7 +1,9 @@
 import React from 'react';
 import Front from './Front';
 import Back from './Back';
+import flippable from './hoc/flippable';
 import './components/WeatherIcon';
+
 const placeholderFrontProps = {
   weather: {
     temperature: 34,
@@ -20,7 +22,11 @@ const placeholderBackProps = {
   longitude: 12.49
 };
 
-export default props => [
-  <Front {...placeholderFrontProps} />,
-  <Back {...placeholderBackProps} />
-];
+const WeatherCard = flippable(props => ({
+  width: 255,
+  height: 365
+}))(Front, Back);
+
+export default props => (
+  <WeatherCard {...placeholderFrontProps} {...placeholderBackProps} />
+);
