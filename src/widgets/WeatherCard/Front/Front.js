@@ -11,7 +11,14 @@ import Summary from './Summary';
 import './Front.css';
 
 const Front = ({
-  weather: { temperature, perceived, humidity, wind, code, description } = {},
+  weather: {
+    temperature,
+    perceived,
+    humidity,
+    wind,
+    iconCode,
+    description
+  } = {},
   dayOfWeek,
   place
 }) => (
@@ -35,7 +42,7 @@ const Front = ({
       <Week currentDay={dayOfWeek} />
     </div>
     <div className="weather-front__summary">
-      <Summary code={code} description={description} />
+      <Summary iconCode={iconCode} description={description} />
     </div>
   </Card>
 );
@@ -46,7 +53,7 @@ Front.propTypes = {
     humidity: PropTypes.number,
     perceived: PropTypes.number,
     wind: PropTypes.number,
-    code: PropTypes.string,
+    iconCode: PropTypes.string,
     description: PropTypes.string
   }),
   place: PropTypes.string,

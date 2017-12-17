@@ -12,6 +12,10 @@
   top: 18px;
   left: 36px;
   position: absolute;
+  max-width: 140px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 .weather-front__perceived {
