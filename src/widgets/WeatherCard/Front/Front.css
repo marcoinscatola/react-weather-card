@@ -10,7 +10,7 @@
 
 .weather-front__place {
   top: 18px;
-  left: 36px;
+  left: 15px;
   position: absolute;
   max-width: 140px;
   text-overflow: ellipsis;
