@@ -1,0 +1,30 @@
+.flippable {
+  transform: perspective(2000px);
+  transform-style: preserve-3d;
+  position: relative;
+}
+.flippable__front-side {
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: transform 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.flippable__front-side--active {
+  transform: rotateY(0deg);
+}
+
+.flippable__back-side {
+  transform: rotateY(-180deg);
+  backface-visibility: hidden;
+  transition: transform 0.3s;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.flippable__back-side--active {
+  transform: rotateY(0deg);
+}
