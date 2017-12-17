@@ -3,6 +3,8 @@
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
+  text-align: center;
+  padding: 0 10px;
 }
 
 .weather-summary__label {
