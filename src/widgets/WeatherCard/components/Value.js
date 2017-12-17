@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Text from './Text';
 import { isNil, isFunction } from '../utils/generic';
 
-export default ({
+const Value = ({
   value,
   formatter = null,
   nullContent = '',
@@ -17,3 +18,11 @@ export default ({
 
   return <Text {...otherProps}>{content}</Text>;
 };
+
+Value.propTypes = {
+  value: PropTypes.any,
+  nullContent: PropTypes.any,
+  formatter: PropTypes.func
+};
+
+export default Value;

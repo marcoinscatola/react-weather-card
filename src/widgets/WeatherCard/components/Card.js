@@ -1,7 +1,15 @@
 import React from 'react';
-import './Card.css';
+import PropTypes from 'prop-types';
 import { joinClasses } from '../utils/dom';
+import './Card.css';
 
-export default ({ children, className }) => (
-  <div className={joinClasses('weather__card', className)}> {children} </div>
+const Card = ({ children, className }) => (
+  <div className={joinClasses('weather__card', className)}>{children}</div>
 );
+
+Card.propTypes = {
+  children: PropTypes.node,
+  className: PropTypes.string
+};
+
+export default Card;
