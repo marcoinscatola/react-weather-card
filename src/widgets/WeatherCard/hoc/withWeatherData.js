@@ -46,7 +46,7 @@ const withWeatherData = (
     }
 
     setFetching = fetching => {
-      this.setState({ fetching });
+      this.setState({ fetching, error: false });
     };
 
     setError = error => {
@@ -54,7 +54,7 @@ const withWeatherData = (
     };
 
     setData = data => {
-      this.setState({ data, fetching: false });
+      this.setState({ data, fetching: false, error: false });
     };
 
     update() {
