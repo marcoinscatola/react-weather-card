@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WeatherCard from 'widgets/WeatherCard';
+import Demo from './Demo';
 const root = document.getElementById('root');
 
-ReactDOM.render(<WeatherCard />, root);
+ReactDOM.render(<Demo />, root);
