@@ -9,7 +9,7 @@ const Temperature = ({ value }) => (
     className="weather-temperature"
     value={value}
     formatter={formatTemperature}
-    nullContent="0°"
+    nullContent={formatTemperature(0)}
   />
 );
 

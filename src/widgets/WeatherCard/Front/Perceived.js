@@ -9,7 +9,11 @@ const Perceived = ({ value }) => (
   <div className="weather-perceived">
     <Text>PERCEIVED</Text>
     <br />
-    <Value value={value} formatter={formatTemperature} nullContent="0°" />
+    <Value
+      value={value}
+      formatter={formatTemperature}
+      nullContent={formatTemperature(0)}
+    />
   </div>
 );
 
