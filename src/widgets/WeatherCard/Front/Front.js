@@ -27,7 +27,9 @@ const Front = ({
 }) => {
   let message = null;
   if (geolocation.fetching) message = 'Accessing location...';
-  else if (weatherData.fetching) message = 'Fetching weather data...';
+  else if (!weatherData.data && weatherData.fetching)
+    // show loading message only when the current weather data is null (first fetch)
+    message = 'Fetching weather data...';
   else if (geolocation.error) message = geolocation.error.message;
   else if (weatherData.error) message = weatherData.error.message;
 
