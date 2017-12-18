@@ -8,9 +8,12 @@ import Wind from './Wind';
 import Perceived from './Perceived';
 import Week from './Week';
 import Summary from './Summary';
+import Message from './Message';
 import './Front.css';
 
 const Front = ({
+  geolocation = {},
+  weatherData = {},
   weather: {
     temperature,
     perceived,
@@ -22,6 +25,12 @@ const Front = ({
   dayOfWeek,
   place
 }) => {
+  let message = null;
+  if (geolocation.fetching) message = 'Accessing location...';
+  else if (weatherData.fetching) message = 'Fetching weather data...';
+  else if (geolocation.error) message = geolocation.error.message;
+  else if (weatherData.error) message = weatherData.error.message;
+
   let currentDay = new Date().getDay();
   return (
     <Card>
@@ -46,6 +55,7 @@ const Front = ({
       <div className="weather-front__summary">
         <Summary iconCode={iconCode} description={description} />
       </div>
+      {message && <Message>{message}</Message>}
     </Card>
   );
 };
