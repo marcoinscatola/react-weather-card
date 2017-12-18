@@ -39,9 +39,8 @@ export default () => (
     </p>
     <div className="demo__grid">
       {cities.map(city => (
-        <div className="demo__item">
+        <div className="demo__item" key={`city-${city.name}`}>
           <WeatherCardConnected
-            key={`city-${city.name}`}
             latitude={city.latitude}
             longitude={city.longitude}
           />

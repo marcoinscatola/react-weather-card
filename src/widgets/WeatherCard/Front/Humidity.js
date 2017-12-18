@@ -9,7 +9,11 @@ const Humidity = ({ value }) => (
   <div className="weather-humidity">
     <Text>HUMIDITY</Text>
     <br />
-    <Value value={value} formatter={formatPercentage} nullContent="0%" />
+    <Value
+      value={value}
+      formatter={formatPercentage}
+      nullContent={formatPercentage(0)}
+    />
   </div>
 );
 

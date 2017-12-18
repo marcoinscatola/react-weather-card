@@ -9,7 +9,11 @@ const Wind = ({ value }) => (
   <div className="weather-wind">
     <Text>WIND</Text>
     <br />
-    <Value value={value} formatter={formatWindSpeed} nullContent="0%" />
+    <Value
+      value={value}
+      formatter={formatWindSpeed}
+      nullContent={formatWindSpeed(0)}
+    />
   </div>
 );
 
