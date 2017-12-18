@@ -1,0 +1,25 @@
+.demo {
+  font-family: sans-serif;
+  color: #444;
+  padding: 0 24px;
+}
+
+.demo__title {
+  text-align: center;
+  margin-top: 1.5em;
+}
+
+.demo__description {
+  text-align: center;
+}
+
+.demo__grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.demo__item {
+  margin: 20px;
+}
